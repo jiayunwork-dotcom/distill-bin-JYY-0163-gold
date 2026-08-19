@@ -40,7 +40,7 @@ func (s System) CheckThermodynamicConsistency(x, y float64) bool {
 	if x <= 0 || x >= 1 || y <= 0 || y >= 1 {
 		return false
 	}
-	calcY := BubblePressure(s.Alpha, x)
+	calcY := s.BubbleY(x)
 	return math.Abs(calcY-y) < 1e-6
 }
 

@@ -16,8 +16,8 @@ func BubblePressure(alpha, x float64) float64 {
 	if alpha <= 0 || x <= 0 || x >= 1 {
 		return 0
 	}
-	xd := DewComposition(alpha, x)
-	return alpha * xd / (1 + (alpha-1)*xd)
+	y := alpha * x / (1 + (alpha-1)*x)
+	return y
 }
 
 func DewComposition(alpha, y float64) float64 {
